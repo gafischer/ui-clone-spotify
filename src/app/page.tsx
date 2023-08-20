@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaUsers } from "react-icons/fa";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import { Footer } from "./components/Footer";
+import { FriendActivity } from "./components/FriendActivity";
 import { PlaylistCard } from "./components/PlaylistCard";
 import { PlaylistMix } from "./components/PlaylistMix";
 import { Sidebar } from "./components/Sidebar";
@@ -11,7 +12,7 @@ const Home: React.FC = () => {
     <div className="flex h-screen flex-col">
       <div className="flex h-full py-2">
         <Sidebar />
-        <main className="flex-1 overflow-y-auto rounded-lg bg-gradient-to-b from-indigo-800 to-[#121212] to-35% p-5">
+        <main className="flex-1 overflow-hidden rounded-lg bg-gradient-to-b from-indigo-800 to-[#121212] to-35% p-5 hover:overflow-y-auto">
           <header className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <button className="h-8 w-8 rounded-full bg-black/70 p-1">
@@ -92,7 +93,7 @@ const Home: React.FC = () => {
             />
           </div>
         </main>
-        <Sidebar />
+        <FriendActivity />
       </div>
       <Footer />
     </div>
